@@ -6,9 +6,9 @@ const apiService = async () => {
     return await axios.get(`${process.env.apiURL}`)
 };
 
-const apiParticipants = async (participants) => {
-    console.log("Real api by Participants");
-    return await axios.get(`${process.env.apiURL}?title=${participants}`)
+const apiTitle = async (title) => {
+    console.log("Real api by title");
+    return await axios.get(`${process.env.apiURL}?title=${title}`)
 };
 
-module.exports = { apiService, apiParticipants };
+module.exports = { apiService, apiTitle };

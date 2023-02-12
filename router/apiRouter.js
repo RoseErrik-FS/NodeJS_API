@@ -1,7 +1,7 @@
 const express = require("express");
 const {
   apiService,
-  apiParticipants,
+  apiTitle,
 } = require("../services/apiService");
 const apiRouter = express.Router();
 
@@ -19,8 +19,8 @@ apiRouter.get("/", (req, res, next) => {
     });
 });
 
-apiRouter.get("/:participants", (req, res, next) => {
-  apiParticipants(req.params.participants)
+apiRouter.get("/:title", (req, res, next) => {
+  apiTitle(req.params.title)
     .then((results) => {
       res.status(200).json(results.data);
     })
